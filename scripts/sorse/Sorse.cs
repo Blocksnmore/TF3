@@ -23,7 +23,6 @@ public class Sorse
     // Checks if specific key is pressed
     public bool KeysPressed(int[] keys)
     {
-        int[] checkedKeys = { };
         foreach (int key in keys)
         {
             if (Input.IsKeyPressed(key)) return true;

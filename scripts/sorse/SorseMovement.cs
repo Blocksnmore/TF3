@@ -12,28 +12,29 @@ public class SorseMovement
     {
         this.Sorse = Sorse;
     }
+
     public Vector3 RunInput(Vector3 vector)
     {
-        int[] ForwardKeys = {
-            (int) Godot.KeyList.Up,
-            (int) Godot.KeyList.W
+        Godot.KeyList[] ForwardKeys = {
+            Godot.KeyList.Up,
+            Godot.KeyList.W
         };
-        int[] BackwardKeys = {
-            (int) Godot.KeyList.Down,
-            (int) Godot.KeyList.S
-        };
-
-        int[] LeftKeys = {
-            (int) Godot.KeyList.Left,
-            (int) Godot.KeyList.A
-        };
-        int[] RightKeys = {
-            (int) Godot.KeyList.Right,
-            (int) Godot.KeyList.D
+        Godot.KeyList[] BackwardKeys = {
+            Godot.KeyList.Down,
+            Godot.KeyList.S
         };
 
-        int[] JumpKeys = {
-            (int) Godot.KeyList.Space
+        Godot.KeyList[] LeftKeys = {
+            Godot.KeyList.Left,
+            Godot.KeyList.A
+        };
+        Godot.KeyList[] RightKeys = {
+            Godot.KeyList.Right,
+            Godot.KeyList.D
+        };
+
+        Godot.KeyList[] JumpKeys = {
+            Godot.KeyList.Space
         };
 
         if (new Sorse().KeysPressed(ForwardKeys))

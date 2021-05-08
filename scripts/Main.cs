@@ -7,6 +7,7 @@ public class Main : Spatial // im not even going to pretend i know what this mea
     {
         GD.Print("Team Fortress 3"); // valve's lawyers approve
         GD.Print("Created by Blocks_n_more"); // ha ha not anymore -zanac
+        LoadFiles();
     }
     public void LoadFiles() // gee i wonder what this does
     {

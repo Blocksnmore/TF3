@@ -21,13 +21,14 @@ public class Sorse
     }
 
     // Checks if specific key is pressed
-    public bool KeysPressed(int[] keys)
+    public bool KeysPressed(Godot.KeyList[] keys)
     {
-        foreach (int key in keys)
+        foreach (Godot.KeyList key in keys)
         {
-            if (Input.IsKeyPressed(key)) return true;
+            if (Input.IsKeyPressed((int) key)) return true;
         }
         return false;
 
     }
+    
 }

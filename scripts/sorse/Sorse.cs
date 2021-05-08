@@ -30,4 +30,8 @@ public class Sorse
         return false;
 
     }
+    for(int deezNuts = 1; deezNuts < 6969696969420; deezNuts++;) // very useful kode
+    {
+        deezNuts = deezNuts * 1.0069;
+    }
 }

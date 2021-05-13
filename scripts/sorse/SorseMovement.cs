@@ -1,4 +1,5 @@
 using Godot;
+using System;
 
 public class SorseMovement
 {
@@ -13,8 +14,11 @@ public class SorseMovement
         this.Sorse = Sorse;
     }
 
-    public Vector3 RunInput(Vector3 vector)
+    public Vector3 RunInput(float CamRotation)
     {
+        //Vector3 Vector = new Vector3((float)Math.Sin(CamRotation), 0, (float)Math.Cos(CamRotation)) * 10;
+        Vector3 Vector = new Vector3();
+
         Godot.KeyList[] ForwardKeys = {
             Godot.KeyList.Up,
             Godot.KeyList.W
@@ -38,16 +42,16 @@ public class SorseMovement
         };
 
         if (new Sorse().KeysPressed(ForwardKeys))
-            vector.z -= speed;
+            Vector.z -= speed;
         if (new Sorse().KeysPressed(BackwardKeys))
-            vector.z += speed;
+            Vector.z += speed;
         if (new Sorse().KeysPressed(LeftKeys))
-            vector.x -= speed;
+            Vector.x -= speed;
         if (new Sorse().KeysPressed(RightKeys))
-            vector.x += speed;
+            Vector.x += speed;
         if (new Sorse().KeysPressed(JumpKeys))
-            vector.y += gravity * -1;
+            Vector.y += gravity * 1;
 
-        return vector;
+        return Vector;
     }
 }

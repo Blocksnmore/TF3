@@ -1,4 +1,5 @@
 using Godot;
+using System;
 
 public class Player : KinematicBody
 {
@@ -13,9 +14,17 @@ public class Player : KinematicBody
 
     public override void _PhysicsProcess(float delta)
     {
-        Vector3 Movement = new Sorse().Movement.RunInput(new Vector3());
+        float CameraRotation = GetNode<Spatial>("RotatePoint").Rotation.y;
+
+        // Semi hacky fix for the movement being in cardinal directions. Thanks Godot forum
+
+        Vector3 Movement = new Sorse().Movement.RunInput(CameraRotation);
+
+        
+
         MoveAndSlide(Movement, Vector3.Up);
     }
+
     public override void _Input(InputEvent inputEvent)
     {
         Godot.KeyList[] ExitKeys = {
@@ -24,11 +33,12 @@ public class Player : KinematicBody
         Godot.KeyList[] ResetPos = {
             Godot.KeyList.Alt
         };
-        Camera GameCamera = GetNode<Camera>("../Camera");
+        Camera GameCamera = GetNode<Camera>("RotatePoint/Camera");
 
         if (new Sorse().KeysPressed(ExitKeys) && !inputEvent.IsEcho())
         {
-            CaptureMouse = !CaptureMouse; GD.Print("Test");
+            //CaptureMouse = !CaptureMouse; GD.Print("Test");
+            GetTree().Quit();
         }
 
         if (new Sorse().KeysPressed(ResetPos) && !inputEvent.IsEcho())
@@ -44,7 +54,7 @@ public class Player : KinematicBody
         if (inputEvent is InputEventMouseMotion inputEventMouseMotion)
         {
             Vector2 Dragged = StartDraggingPos - inputEventMouseMotion.Relative;
-            GetNode<KinematicBody>("../Player").RotateY(Dragged.x * 0.005f);
+            GetNode<Spatial>("RotatePoint").RotateY(Dragged.x * 0.005f);
             GameCamera.RotateX(Dragged.y * 0.005f);
 
             if (GameCamera.Rotation.x < -1.5f)

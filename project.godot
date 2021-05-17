@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="TF3"
-run/main_scene="res://TF3.tscn"
+run/main_scene="res://Menu.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -19,6 +19,11 @@ config/icon="res://icon.png"
 window/size/width=1280
 window/size/height=720
 window/vsync/use_vsync=false
+
+[global]
+
+fps=false
+vsync=false
 
 [physics]
 

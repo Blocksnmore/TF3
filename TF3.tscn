@@ -3,10 +3,9 @@
 [ext_resource path="res://scripts/Main.cs" type="Script" id=1]
 [ext_resource path="res://scripts/game/Player.cs" type="Script" id=2]
 [ext_resource path="res://assets/Maps/testmap.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://assets/Players/Test.obj" type="ArrayMesh" id=4]
 
-[sub_resource type="CapsuleMesh" id=1]
-
-[sub_resource type="CapsuleShape" id=2]
+[sub_resource type="CapsuleShape" id=1]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 1 )
@@ -16,11 +15,60 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.56027, 1.46916, 8.80181 )
 script = ExtResource( 2 )
 
 [node name="Model" type="MeshInstance" parent="Player"]
-mesh = SubResource( 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00218, 0 )
+mesh = ExtResource( 4 )
 material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+material/21 = null
+material/22 = null
+material/23 = null
+material/24 = null
+material/25 = null
+material/26 = null
+material/27 = null
+material/28 = null
+material/29 = null
+material/30 = null
+material/31 = null
+material/32 = null
+material/33 = null
+material/34 = null
+material/35 = null
+material/36 = null
+material/37 = null
+material/38 = null
+material/39 = null
+material/40 = null
+material/41 = null
+material/42 = null
+material/43 = null
+material/44 = null
+material/45 = null
+material/46 = null
+material/47 = null
 
 [node name="Collision" type="CollisionShape" parent="Player"]
-shape = SubResource( 2 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.494286, 0 )
+shape = SubResource( 1 )
 
 [node name="RotatePoint" type="Spatial" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 0.984995, 0.172582, 0, -0.172582, 0.984995, -0.0424855, 0.930699, 0.00387037 )

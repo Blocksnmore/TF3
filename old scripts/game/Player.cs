@@ -3,7 +3,7 @@ using System;
 
 public class Player : KinematicBody
 {
-    Main Main;
+    TF3 Main;
     Spatial CameraSpatial;
     Vector2 StartDraggingPos = new Vector2();
     bool CaptureMouse = true;

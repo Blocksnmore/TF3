@@ -1,23 +1,21 @@
 using Godot;
-using System.Linq;
 
 public class Sorse
 {
-    Main Main;
-    public SorseMovement Movement;
-    public Sorse(Main Main = null)
+    SorseClassTypes.InstanceData ClassTypes = new SorseClassTypes.InstanceData();
+
+    public Sorse(SorseClassTypes.InstanceData Classes = null)
     {
-        if (Main != null)
-        {
-            this.Main = Main;
-        }
-        Movement = new SorseMovement(this);
+        if (Classes.Menu != null) this.ClassTypes.Menu = Classes.Menu;
+        if (Classes.Player != null) this.ClassTypes.Player = Classes.Player;
+
+        this.ClassTypes.Sorse3DMovement = new Sorse3DMovement(this);
     }
 
     // Returns Main instance
-    public Main GetInstance()
+    public SorseClassTypes.InstanceData GetInstances()
     {
-        return Main;
+        return ClassTypes;
     }
 
     // Checks if specific key is pressed
@@ -25,10 +23,10 @@ public class Sorse
     {
         foreach (Godot.KeyList key in keys)
         {
-            if (Input.IsKeyPressed((int) key)) return true;
+            if (Input.IsKeyPressed((int)key)) return true;
         }
         return false;
 
     }
-    
+
 }

@@ -11,6 +11,6 @@ public class TF3 : Spatial // im not even going to pretend i know what this mean
     }
     public void LoadFiles() // gee i wonder what this does
     {
-        new Sorse(this); // achieved with sorse
+        new Sorsee(this); // achieved with sorse
     }
 }

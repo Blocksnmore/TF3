@@ -1,11 +1,11 @@
 using Godot;
 using System.Linq;
 
-public class Sorse
+public class Sorsee
 {
     TF3 Main;
     public SorseMovement Movement;
-    public Sorse(TF3 Main = null)
+    public Sorsee(TF3 Main = null)
     {
         if (Main != null)
         {

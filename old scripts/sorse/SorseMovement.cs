@@ -8,10 +8,10 @@ public class SorseMovement
     int speed = 10;
     int gravity = 10;
 
-    Sorse Sorse;
-    public SorseMovement(Sorse Sorse)
+    Sorsee Sorsee;
+    public SorseMovement(Sorsee Sorsee)
     {
-        this.Sorse = Sorse;
+        this.Sorsee = Sorsee;
     }
 
     public Vector3 RunInput(float CamRotation)

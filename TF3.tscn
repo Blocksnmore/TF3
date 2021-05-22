@@ -1,9 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scripts/Main.cs" type="Script" id=1]
-[ext_resource path="res://scripts/game/Player.cs" type="Script" id=2]
-[ext_resource path="res://assets/Maps/testmap.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://assets/Players/Test.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://scripts/game/player/Player.cs" type="Script" id=1]
+[ext_resource path="res://assets/Maps/testmap.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://assets/Players/Test.obj" type="ArrayMesh" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 

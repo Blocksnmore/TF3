@@ -7,9 +7,9 @@ public class i : KinematicBody
     Spatial CameraSpatial;
     Vector2 StartDraggingPos = new Vector2();
     bool CaptureMouse = true;
-    public Player()
+    public i()
     {
-        Main = new Sorse().GetInstance();
+        Main = new Sorsee().GetInstance();
     }
 
     public override void _PhysicsProcess(float delta)
@@ -18,7 +18,7 @@ public class i : KinematicBody
 
         // Semi hacky fix for the movement being in cardinal directions. Thanks Godot forum
 
-        Vector3 Movement = new Sorse().Movement.RunInput(CameraRotation);
+        Vector3 Movement = new Sorsee().Movement.RunInput(CameraRotation);
 
         
 

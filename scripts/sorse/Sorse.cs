@@ -2,19 +2,31 @@ using Godot;
 
 public class Sorse
 {
-    SorseClassTypes.InstanceData ClassTypes = new SorseClassTypes.InstanceData();
+    public Menu Menu;
+    public Player Player;
+    public Sorse3DMovement Sorse3DMovement;
 
-    public Sorse(SorseClassTypes.InstanceData Classes = null)
+    public Sorse()
     {
-        if (Classes.Menu != null) this.ClassTypes.Menu = Classes.Menu;
-        if (Classes.Player != null) this.ClassTypes.Player = Classes.Player;
+        this.Sorse3DMovement = new Sorse3DMovement(this);
+    }
 
-        this.ClassTypes.Sorse3DMovement = new Sorse3DMovement(this);
+    public class Instances {
+        public void Menu(Menu Menu){
+            new Sorse().Menu = Menu;
+        }
+        public void Player(Player Player){
+            new Sorse().Player = Player;
+        }
     }
 
     // Returns Main instance
     public SorseClassTypes.InstanceData GetInstances()
     {
+        SorseClassTypes.InstanceData ClassTypes = new SorseClassTypes.InstanceData();
+        ClassTypes.Menu = Menu;
+        ClassTypes.Player = Player;
+        ClassTypes.Sorse3DMovement = Sorse3DMovement;
         return ClassTypes;
     }
 
@@ -28,5 +40,7 @@ public class Sorse
         return false;
 
     }
-
+    public class Movement3D{
+        
+    }
 }

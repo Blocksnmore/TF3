@@ -19,7 +19,7 @@ public class i : KinematicBody
         // Semi hacky fix for the movement being in cardinal directions. Thanks Godot forum
 
         Vector3 Movement = new Sorsee().Movement.RunInput(CameraRotation);
-
+        
         
 
         MoveAndSlide(Movement, Vector3.Up);
@@ -37,7 +37,6 @@ public class i : KinematicBody
 
         if (new Sorse().KeysPressed(ExitKeys) && !inputEvent.IsEcho())
         {
-            //CaptureMouse = !CaptureMouse; GD.Print("Test");
             GetTree().Quit();
         }
 

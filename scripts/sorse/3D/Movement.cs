@@ -6,7 +6,7 @@ public class Sorse3DMovement
     // Settings
     // - Movement
     public float Gravity = 10;
-    public float Speed = 0.1f;
+    public float Speed = 5f;
 
     Sorse Sorse;
     public Sorse3DMovement(Sorse Sorse)
